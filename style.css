@@ -33,9 +33,9 @@ body {
 .navbar {
   background-color: #4b2e2b;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; 
   align-items: center;
-  padding: 8px 20px;
+  padding: 16px 40px;
 }
 
 .navbar ul {
@@ -43,6 +43,7 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  margin-left: auto; 
 }
 
 .navbar li {
@@ -59,19 +60,37 @@ body {
   text-decoration: underline;
 }
 
-.icons input {
-  padding: 4px 6px;
-  border-radius: 4px;
-  border: none;
+.icons {
+  display: flex;
+  align-items: center;
 }
 
-.icons button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 18px;
-  margin-left: 8px;
+.icons input {
+  padding: 6px 10px;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-btn {
+  padding: 0 10px;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 0 4px 4px 0;
+  background-color: #4b2e2b;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.search-btn img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1); 
 }
 
 /* Sección introductoria */
@@ -84,22 +103,20 @@ body {
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
   gap: 50px;
-  width: 80%;
+  width: 100%;
   padding: 50px;
   box-sizing: border-box;
 }
 
-/* Tarjetas Bebidas y Postres */
 .cards .card:first-child {
   grid-column: 1;
   grid-row: 1;
   display: flex;
   align-items: center;
-  gap: 120px;
-    justify-self: start;
-    margin-left: 30px;
+  gap: 150px;
+  justify-self: start;
+  margin-left: 160px;
 }
 
 .cards .card:last-child {
@@ -108,9 +125,9 @@ body {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 120px;
+  gap: 150px;
   justify-self: end;
-  margin-right: 30px;
+  margin-right: 160px;
 }
 
 /* Tarjeta individual */
@@ -118,28 +135,26 @@ body {
   background-color: #fefaf7;
   border: 1.5px solid #4b2e2b;
   border-radius: 15px;
-  width: 230px;
-  padding: 20px;
+  width: 200px;
+  padding: 30px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
-/* Imagen dentro de la tarjeta */
 .card img {
-  max-width: 150px;
+  max-width: 200px;
   height: auto;
   border-radius: 10px;
 }
 
-/* Contenido de la tarjeta */
 .card-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Título y botón */
-.card h3, .card button {
+.card h3,
+.card button {
   margin: 5px 0;
 }
 
@@ -164,9 +179,21 @@ body {
   color: #fff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 20px 40px;
   flex-wrap: wrap;
+  margin-top: 20px;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  right: 40px;
+  height: 2px;
+  background-color: white;
 }
 
 .footer a {
@@ -178,12 +205,46 @@ body {
   text-decoration: underline;
 }
 
-.footer-info p {
-  margin: 4px 0;
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 8px;
 }
 
-.footer-social {
-  text-align: right;
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 40px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-item img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.social-item img:hover {
+  transform: scale(1.2);
+}
+
+.social-item span,
+.social-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.social-item a:hover {
+  text-decoration: underline;
 }
 
 .logo {
@@ -196,4 +257,5 @@ body {
   align-items: center;
   font-weight: bold;
   margin-top: 8px;
+  margin-left: auto;
 }
