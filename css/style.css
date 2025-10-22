@@ -1,0 +1,164 @@
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  background-color: #fdf6f0;
+  color: #4b2e2b;
+}
+
+/* Encabezado */
+.hero {
+  background-image: url("https://picsum.photos/1200/400");
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #4b2e2b;
+}
+
+.hero-text p {
+  margin-top: 5px;
+  color: #744b43;
+  font-weight: 500;
+}
+
+/* Navegación */
+.navbar {
+  background-color: #4b2e2b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.icons input {
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: none;
+}
+
+.icons button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+/* Introductorio */
+.intro {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #fefaf7;
+  border: 1.5px solid #4b2e2b;
+  border-radius: 15px;
+  width: 230px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+.btn {
+  background-color: #e6b6b2;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #d39c98;
+}
+
+/* Footer */
+.footer {
+  background-color: #4b2e2b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: #fddbd3;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-info p {
+  margin: 4px 0;
+}
+
+.footer-social {
+  text-align: right;
+}
+
+.logo {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 8px;
+}
