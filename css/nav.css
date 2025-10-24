@@ -1,0 +1,89 @@
+/* nav.css */
+:root {
+  --rosa: #f3cfcb;
+  --beige: #F5EFE6;
+  --cafe: #432323;
+}
+/* Navegación principal */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--cafe);
+  color: var(--beige);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+/* Lista horizontal de enlaces */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  position: relative;
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: var(--beige);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Submenú */
+.has-submenu > .submenu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  min-width: 180px;
+  background: var(--cafe);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 8px 0;
+  display: none;
+  z-index: 10;
+}
+
+.has-submenu:hover > .submenu {
+  display: block;
+}
+
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  display: block;
+  padding: 8px 12px;
+  font-weight: 500;
+}
+
+.submenu a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Estilos de inputs y botones en la barra (si los hay) */
+.icons input {
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: none;
+}
+
+.icons button {
+  background: none;
+  border: none;
+  color: var(--beige);
+  font-size: 18px;
+  margin-left: 8px;
+  cursor: pointer;
+}

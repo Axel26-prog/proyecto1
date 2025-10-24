@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KOKO | Helados, Bebidas y Postres</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <title>KOKO | FAQs</title>
   <link rel="stylesheet" href="./css/nav.css">
   <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/faqs.css">
 </head>
-
 <body>
-  <!-- Barra de navegación (ahora va primero) -->
+
+  <!-- Barra de navegación -->
   <nav class="navbar">
     <div class="icons"></div>
 
@@ -29,42 +28,52 @@
     </ul>
   </nav>
 
-  <!-- Encabezado con imagen principal -->
-  <header class="hero">
-    <div class="hero-text">
-      <h1>KOKO.</h1>
-      <p>Helados | Bebidas | Postres</p>
-    </div>
+  <!-- Contenedor de FAQs -->
+  <main class="faq-container">
+    <h1>Preguntas Frecuentes</h1>
 
-    <!-- Onda inferior + botón de bajar -->
-    <div class="hero-wave">
-      <a class="scroll-down" href="#" id="scrollBtn" aria-label="Bajar a la siguiente sección">⌄</a>
-
-    </div>
-  </header>
-
-  <!-- Sección introductoria -->
-  <section id="intro" class="intro">
-    <h2>Breve texto introductorio</h2>
-
-    <div class="cards">
-      <div class="card">
-        <img src="./img/Bubble Tea Taro.png" alt="Bebida popular">
-        <div class="card-content">
-          <h3>Bebidas Populares</h3>
-          <button class="btn">Ver Más</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./img/Mochi con Fresas.png" alt="Nuevo postre">
-        <div class="card-content">
-          <h3>Nuevos Postres</h3>
-          <button class="btn">Ver Más</button>
-        </div>
+    <div class="faq-item">
+      <div class="faq-question">Aqui Pregunta</div>
+      <div class="faq-answer">
+        <p>Respuesta</p>
       </div>
     </div>
-  </section>
+
+    <div class="faq-item">
+      <div class="faq-question">Aqui Pregunta</div>
+      <div class="faq-answer">
+        <p>Respuesta</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Aqui Pregunta</div>
+      <div class="faq-answer">
+        <p>Respuesta</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Aqui Pregunta</div>
+      <div class="faq-answer">
+        <p>Respuesta.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Aqui Pregunta</div>
+      <div class="faq-answer">
+        <p>Respuesta</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Aqui Pregunta</div>
+      <div class="faq-answer">
+        <p>Respuesta</p>
+      </div>
+    </div>
+  </main>
 
   <!-- Pie de página -->
   <footer class="footer">
@@ -91,18 +100,22 @@
     </div>
     
   </footer>
-
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const scrollBtn = document.getElementById("scrollBtn");
-      const target = document.querySelector("#intro");
+    const faqItems = document.querySelectorAll('.faq-item');
 
-      scrollBtn.addEventListener("click", function (e) {
-        e.preventDefault(); // evita el salto instantáneo al recargar
-        target.scrollIntoView({ behavior: "smooth" }); // scroll suave
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+        const answer = item.querySelector('.faq-answer');
+        if(item.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        } else {
+          answer.style.maxHeight = null;
+        }
       });
     });
   </script>
-</body>
 
+</body>
 </html>

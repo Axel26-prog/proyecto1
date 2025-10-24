@@ -1,0 +1,93 @@
+:root {
+  --rosa: #f3cfcb;
+  --beige: #F5EFE6;
+  --cafe: #432323;
+}
+
+.footer {
+  background-color: var(--cafe);
+  color: #fff;
+  width: 100%;               /* asegurar ancho total */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;    /* columna, logo abajo */
+  align-items: flex-start;   /* todo alineado a la izquierda */
+  padding: 25px 40px;
+  position: relative;
+  gap: 18px;
+  margin: 0;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;                   /* empezar desde 0 para evitar offsets */
+  right: 0;
+  height: 2px;
+  background-color: rgba(255,255,255,0.25);
+  pointer-events: none;
+}
+
+.footer a {
+  color: #fddbd3;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+  gap: 12px 24px;
+  width: auto;               /* que no intente centrar o estirarse raro */
+  justify-items: start;      /* IMPORTANT: alinea celdas a la izquierda */
+  align-items: center;
+}
+
+
+.social-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  /* fuerza contenido a la izquierda */
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.social-item img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: transform 0.15s ease;
+}
+.social-item img:hover {
+  transform: scale(1.2);
+}
+
+
+.social-item span,
+.social-item a {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.social-item a:hover {
+  text-decoration: underline;
+}
