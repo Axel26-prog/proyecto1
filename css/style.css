@@ -1,42 +1,100 @@
+:root {
+  --rosa: #f3cfcb;
+  --beige: #F5EFE6;
+  --cafe: #432323;
+}
+
+/* Suaviza el salto al ancla */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Georgia', serif;
   margin: 0;
-  background-color: #fdf6f0;
-  color: #4b2e2b;
+  background-color: var(--beige);
+  color: var(--cafe);
 }
 
 /* Encabezado */
 .hero {
-  background-image: url("https://picsum.photos/1200/400");
-  background-size: cover;
-  background-position: center;
-  height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url("../img/header.png") center/cover no-repeat;
+  color: var(--beige);
+  position: relative;
+  overflow: hidden;
+  height: 800px;
+  display: grid;
+  place-items: center;
   text-align: center;
 }
 
 .hero-text h1 {
-  font-size: 3em;
+  font-size: 5em;
   margin: 0;
-  color: #4b2e2b;
+  color: var(--cafe);
+  letter-spacing: 1px;
 }
 
 .hero-text p {
   margin-top: 5px;
-  color: #744b43;
+  color: var(--cafe);
   font-weight: 500;
+}
+
+/* Onda inferior del hero */
+.hero-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background: var(--beige);
+  /* mismo color del body */
+
+  /* curvas suaves a los lados para simular la onda */
+  border-top-left-radius: 70px 50px;
+  border-top-right-radius: 70px 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Botón circular de bajar */
+.scroll-down {
+  margin-top: -230px;
+  /* lo empuja dentro de la onda */
+  width: 56px;
+  height: 56px;
+  background: var(--cafe);
+  /* rojo marca */
+  border: none;
+  border-radius: 50%;
+  color: var(--beige);
+  font-size: 24px;
+  line-height: 56px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
+  transition: transform .5s ease, box-shadow .30 ease;
+}
+
+.scroll-down:hover {
+  transform: translateY(3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .25);
 }
 
 /* Navegación */
 .navbar {
-  background-color: #4b2e2b;
-  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--cafe);
+  color: var(--beige);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 20px;
+  padding: 30px 20px;
 }
 
 .navbar ul {
@@ -47,17 +105,50 @@ body {
 }
 
 .navbar li {
-  margin: 0 15px;
+  position: relative;
+  margin: 0 20px;
 }
 
 .navbar a {
-  color: white;
+  color: var(--beige);
   text-decoration: none;
   font-weight: bold;
 }
 
 .navbar a:hover {
   text-decoration: underline;
+}
+
+/* Submenú básico */
+.has-submenu>.submenu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  min-width: 180px;
+  background: var(--cafe);
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 8px;
+  padding: 8px 0;
+  display: none;
+  z-index: 10;
+}
+
+.has-submenu:hover>.submenu {
+  display: block;
+}
+
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  display: block;
+  padding: 8px 12px;
+  font-weight: 500;
+}
+
+.submenu a:hover {
+  background: rgba(255, 255, 255, .08);
 }
 
 .icons input {
@@ -69,7 +160,7 @@ body {
 .icons button {
   background: none;
   border: none;
-  color: white;
+  color: var(--beige);
   font-size: 18px;
   margin-left: 8px;
   cursor: pointer;
@@ -78,19 +169,21 @@ body {
 /* Introductorio */
 .intro {
   text-align: center;
-  padding: 40px 0;
+  padding: 100px 0;
+  
 }
 
 .cards {
   display: flex;
   justify-content: center;
   gap: 60px;
-  margin-top: 30px;
+  margin-top: 100px;
+  flex-wrap: wrap;
 }
 
 .card {
-  background-color: #fefaf7;
-  border: 1.5px solid #4b2e2b;
+  background-color: var(--beige);
+  border: 2px solid var(--cafe);
   border-radius: 15px;
   width: 230px;
   padding: 20px;
@@ -110,7 +203,7 @@ body {
 }
 
 .btn {
-  background-color: #e6b6b2;
+  background-color: var(--rosa);
   border: none;
   padding: 8px 18px;
   border-radius: 20px;
@@ -120,13 +213,13 @@ body {
 }
 
 .btn:hover {
-  background-color: #d39c98;
+  background-color: var(--rosa);
 }
 
 /* Footer */
 .footer {
-  background-color: #4b2e2b;
-  color: #fff;
+  background-color: var(--cafe);
+  color: var(--beige);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -135,7 +228,7 @@ body {
 }
 
 .footer a {
-  color: #fddbd3;
+  color: var(--beige);
   text-decoration: none;
 }
 
@@ -152,7 +245,7 @@ body {
 }
 
 .logo {
-  border: 1px solid #fff;
+  border: 1px solid var(--beige);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -161,4 +254,39 @@ body {
   align-items: center;
   font-weight: bold;
   margin-top: 8px;
+}
+
+.social-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-item img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(95%);
+  transition: transform 0.3s ease;
+}
+
+.social-item img:hover {
+  transform: scale(1.1);
+}
+
+.social-item span,
+.social-item a {
+  font-size: 0.95em;
+  color: var(--beige);
+}
+
+.social-item a:hover {
+  text-decoration: underline;
 }

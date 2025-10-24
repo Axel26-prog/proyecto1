@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KOKO | Helados, Bebidas y Postres</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+  <!-- Barra de navegación (ahora va primero) -->
+  <nav class="navbar">
+    <div class="icons"></div>
+
+    <ul>
+      <li class="has-submenu">
+        <a href="#">Menu</a>
+        <ul class="submenu">
+          <li><a href="#">Sobre KOKO</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Acerca de</a></li>
+      <li><a href="#">Contactanos</a></li>
+    </ul>
+  </nav>
 
   <!-- Encabezado con imagen principal -->
   <header class="hero">
@@ -14,74 +33,73 @@
       <h1>KOKO.</h1>
       <p>Helados | Bebidas | Postres</p>
     </div>
+
+    <!-- Onda inferior + botón de bajar -->
+    <div class="hero-wave">
+      <a class="scroll-down" href="#" id="scrollBtn" aria-label="Bajar a la siguiente sección">⌄</a>
+
+    </div>
   </header>
 
-  <!-- Barra de navegación -->
-  <nav class="navbar">
-  <div class="icons">
-</div>
-
-  <ul>
-  <li class="has-submenu">
-    <a href="#">Menu</a>
-    <ul class="submenu">
-      <li><a href="#">Sobre KOKO</a></li>
-      <li><a href="#">Blogs</a></li>
-      <li><a href="#">FAQs</a></li>
-    </ul>
-  </li>
-  <li><a href="#">Acerca de</a></li>
-  <li><a href="#">Contactanos</a></li>
-</ul>
-</nav>
-
-
   <!-- Sección introductoria -->
-  <section class="intro">
+  <section id="intro" class="intro">
     <h2>Breve texto introductorio</h2>
 
-   <div class="cards">
-  <div class="card">
-    <img src="https://i.imgur.com/oPHAqDW.png" alt="Bebida popular">
-    <div class="card-content">
-      <h3>Bebidas Populares</h3>
-      <button class="btn">Ver Más</button>
-    </div>
-  </div>
+    <div class="cards">
+      <div class="card">
+        <img src="./img/Bubble Tea Taro.png" alt="Bebida popular">
+        <div class="card-content">
+          <h3>Bebidas Populares</h3>
+          <button class="btn">Ver Más</button>
+        </div>
+      </div>
 
-  <div class="card">
-    <img src="https://i.imgur.com/24kEaPz.png" alt="Nuevo postre">
-    <div class="card-content">
-      <h3>Nuevos Postres</h3>
-      <button class="btn">Ver Más</button>
+      <div class="card">
+        <img src="./img/Mochi con Fresas.png" alt="Nuevo postre">
+        <div class="card-content">
+          <h3>Nuevos Postres</h3>
+          <button class="btn">Ver Más</button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </section>
 
   <!-- Pie de página -->
- <footer class="footer">
-  <div class="footer-social">
-    <div class="social-grid">
-      <div class="social-item">
-        <img src="https://cdn-icons-png.flaticon.com/128/1384/1384023.png" alt="+(506) 7123-3755">
-        <span>+(506) 7123-3755</span>
+  <footer class="footer">
+    <div class="footer-social">
+      <div class="social-grid">
+        <div class="social-item">
+          <img src="./img/logo whatsapp.png" alt="+(506) 7123-3755">
+          <span>+(506) 7123-3755</span>
+        </div>
+        <div class="social-item">
+          <img src="./img/logo instagram.png.png" alt="koko.soda25">
+          <span>koko.soda25</span>
+        </div>
+        <div class="social-item">
+          <img src="./img/logo facebook.png" alt="Huang Nick (Soda Koko)">
+          <span>Soda Koko</span>
+        </div>
+        <div class="social-item">
+          <img src="./img/ubicacion.png" alt="Click aqui para obtener la ubicación">
+          <a href="#">Click aquí para obtener la ubicación</a>
+        </div>
       </div>
-      <div class="social-item">
-        <img src="https://cdn-icons-png.flaticon.com/128/87/87390.png" alt="koko.soda25">
-        <span>koko.soda25</span>
-      </div>
-      <div class="social-item">
-        <img src="https://cdn-icons-png.flaticon.com/128/747/747374.png" alt="Huang Nick (Soda Koko)">
-        <span>Huang Nick (Soda Koko)</span>
-      </div>
-      <div class="social-item">
-        <img src="https://cdn-icons-png.flaticon.com/128/3421/3421853.png" alt="Click aqui para obtener la ubicación">
-        <a href="#">Click aquí para obtener la ubicación</a>
-      </div>
+      <div class="logo">KOKO.</div>
     </div>
-    <div class="logo">KOKO.</div>
-  </div>
-</footer>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollBtn = document.getElementById("scrollBtn");
+      const target = document.querySelector("#intro");
+
+      scrollBtn.addEventListener("click", function (e) {
+        e.preventDefault(); // evita el salto instantáneo al recargar
+        target.scrollIntoView({ behavior: "smooth" }); // scroll suave
+      });
+    });
+  </script>
 </body>
+
 </html>
