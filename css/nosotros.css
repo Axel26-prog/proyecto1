@@ -6,6 +6,7 @@
 
 /* Encabezado */
 .nosotros {
+
     background: var(--rosa);
     color: var(--beige);
     position: relative;
@@ -265,18 +266,30 @@
 
 /* ====== Multimedia ====== */
 .media-wrap {
-    background: #fffaf5;
+    background: black;
+    /* barras negras alrededor */
     border: 2px solid var(--cafe);
     border-radius: 18px;
-    padding: 14px;
-    max-width: 800px;
-    margin: 0 auto 12px;
+    overflow: hidden;
+    max-width: 600px;
+    /* controla el ancho del cuadro */
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16 / 9;
+    /* formato del recuadro fijo */
 }
 
 .media-wrap video {
-    width: 100%;
-    height: auto;
+    height: 100%;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+    /* mantiene proporción original */
     border-radius: 12px;
+    background: black;
+    /* barras negras si el video no llena el cuadro */
 }
 
 .audio-wrap {

@@ -35,8 +35,7 @@
         <div class="nosotros-text">
             <h1>Nosotros</h1>
             <p>En KOKO. creemos que un buen sabor puede cambiar tu día.</p>
-            <p>Cada bebida, cada postre y cada detalle del local fue pensado para</p>
-            <p>que nuestros clientes vivan un momento especial, alegre y distinto.</p>
+
         </div>
 
         <!-- Onda inferior + botón de bajar -->
@@ -172,19 +171,13 @@
 
     <!-- MULTIMEDIA -->
     <section class="container">
-        <h2 class="section-title">Multimedia</h2>
+        <h2 class="section-title">Nuestra Ubicación</h2>
+
         <div class="media-wrap">
-            <!-- Video (espacio para tu archivo) -->
-            <video controls preload="none" poster="./img/header.png">
-                <!-- Reemplaza por tu archivo de video -->
-                <!-- <source src="./media/koko-presentacion.mp4" type="video/mp4"> -->
+            <video controls preload="metadata" poster="./img/header.png">
+                <source src="./Video/KOKO.mp4" type="video/mp4">
                 Tu navegador no soporta video HTML5.
             </video>
-        </div>
-
-        <div class="audio-wrap">
-            <!-- Audio opcional (espacio) -->
-            <!-- <audio controls src="./media/jingle-koko.mp3"></audio> -->
         </div>
     </section>
 
@@ -246,12 +239,20 @@
         document.addEventListener("DOMContentLoaded", function () {
             const scrollBtn = document.getElementById("scrollBtn");
             const target = document.querySelector("#historia");
+
             scrollBtn.addEventListener("click", function (e) {
-                e.preventDefault();// evita el salto instantáneo al recargar
-                target.scrollIntoView({ behavior: "smooth" });// scroll suave
+                e.preventDefault();
+
+                // posición de la sección menos un pequeño offset
+                const y = target.getBoundingClientRect().top + window.pageYOffset - 100;
+
+                window.scrollTo({
+                    top: y,
+                    behavior: "smooth"
+                });
             });
 
-            //Evitar que las cards con href="#" suban la página
+            // Evitar que las cards con href="#" suban la página
             document.querySelectorAll('.product-link[href="#"]').forEach(a => {
                 a.addEventListener('click', e => e.preventDefault());
             });
