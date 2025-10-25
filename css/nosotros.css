@@ -1,0 +1,339 @@
+:root {
+    --rosa: #f3cfcb;
+    --beige: #F5EFE6;
+    --cafe: #432323;
+}
+
+/* Encabezado */
+.nosotros {
+    background: var(--rosa);
+    color: var(--beige);
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.nosotros-text h1 {
+    font-size: 5em;
+    margin: 0;
+    color: var(--cafe);
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nosotros-text p {
+    margin-top: 5px;
+    color: var(--cafe);
+    font-weight: 500;
+}
+
+/* Onda inferior del hero */
+.hero-wave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background: var(--beige);
+    /* mismo color del body */
+
+    /* curvas suaves a los lados para simular la onda */
+    border-top-left-radius: 70px 50px;
+    border-top-right-radius: 70px 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Botón circular de bajar */
+.scroll-down {
+    margin-top: -130px;
+    /* lo empuja dentro de la onda */
+    width: 56px;
+    height: 56px;
+    background: var(--cafe);
+    /* rojo marca */
+    border: none;
+    border-radius: 50%;
+    color: var(--beige);
+    font-size: 24px;
+    line-height: 56px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
+    transition: transform .5s ease, box-shadow .30 ease;
+}
+
+.scroll-down:hover {
+    transform: translateY(3px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .25);
+}
+
+/* ====== LAYOUT SECCIONES ====== */
+.container {
+    max-width: 1100px;
+    margin: 10px auto;
+    padding: 0 20px;
+    color: var(--cafe);
+}
+
+.historia {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 0 20px;
+    color: var(--cafe);
+}
+
+.productos {
+    max-width: 1100px;
+    margin: 150px auto;
+    padding: 0 20px;
+    color: var(--cafe);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 0 0 16px;
+}
+
+.lead {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.lead.em {
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+/* divisor */
+.section-divider {
+    border: none;
+    height: 2px;
+    background: var(--cafe);
+    width: 80%;
+    margin: 80px auto;
+    border-radius: 2px;
+    opacity: .25;
+}
+
+/* ====== Filosofía / Misión-Vision ====== */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.card {
+    background: #fffaf5;
+    border: 2px solid var(--cafe);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .06);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.mt {
+    margin-top: 16px;
+}
+
+.bullet {
+    padding-left: 0;
+    list-style: none;
+    line-height: 1.9;
+}
+
+.cols-2 {
+    list-style: none;
+    padding-left: 0;
+    margin: 8px 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+/* ====== Resumen de productos/servicios ====== */
+.resume-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px auto 0;
+    max-width: 720px;
+    line-height: 1.9;
+}
+
+.resume-list li {
+    background: var(--beige);
+    border-left: 4px solid var(--cafe);
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* ====== Galería ====== */
+/* Lista de productos */
+.product-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 28px;
+    padding: 0;
+    margin: 36px 0 28px;
+}
+
+/* Tarjeta */
+.product-card {
+    display: block;
+    width: 220px;
+    height: 320px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.product-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+/* Fondo redondeado + imagen flotante */
+.thumb {
+    position: relative;
+    height: 280px;
+    /* hace el bloque visual más alto */
+    max-width: 180px;
+    /* hace el bloque visual más delgado */
+    margin: 0 auto;
+    /* centra el bloque dentro de la tarjeta */
+    border-radius: 28px;
+    background-color: #fffaf5;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    border: 2px solid var(--cafe);
+}
+
+/* Línea fina debajo del título de sección */
+.line-separator {
+    width: 80px;
+    height: 3px;
+    background-color: var(--cafe);
+    margin: 0 auto 25px;
+    border-radius: 2px;
+}
+
+/* Imagen del producto */
+.thumb img {
+    width: 110%;
+    height: auto;
+    object-fit: contain;
+    transform: translateY(6px) rotate(-2deg);
+    filter: drop-shadow(0 14px 18px rgba(0, 0, 0, .22));
+}
+
+/* Efecto sutil al pasar el mouse */
+.thumb:hover img {
+    transform: translateY(0) scale(1.05) rotate(0deg);
+}
+
+/* Nombre bajo la tarjeta */
+.product-name {
+    margin: 12px 0 0;
+    font-size: 1.05rem;
+}
+
+.product-card:hover .thumb {
+    transform: scale(1.03);
+    transition: transform .3s ease;
+}
+
+/* ====== Multimedia ====== */
+.media-wrap {
+    background: #fffaf5;
+    border: 2px solid var(--cafe);
+    border-radius: 18px;
+    padding: 14px;
+    max-width: 800px;
+    margin: 0 auto 12px;
+}
+
+.media-wrap video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.audio-wrap {
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* ====== Testimonios ====== */
+.testi {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.testi-card {
+    background: #fffaf5;
+    border: 2px solid var(--cafe);
+    border-radius: 16px;
+    padding: 18px;
+    line-height: 1.7;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+}
+
+.testi-card p {
+    margin: 0 0 8px;
+}
+
+.testi-card cite {
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 860px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros {
+        height: 580px;
+    }
+
+    .nosotros-text h1 {
+        font-size: 3.6rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .nosotros {
+        height: 520px;
+    }
+
+    .nosotros-text h1 {
+        font-size: 3rem;
+    }
+
+    .gcard img {
+        height: 150px;
+    }
+}
