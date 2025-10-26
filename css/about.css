@@ -1,0 +1,138 @@
+  body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      background-color: #F5EFE6;
+      color: #432323;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: #432323;
+  font-size: 2.5em;
+  margin-top: 40px;
+}
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1000px;
+      width: 100%;
+      background-color: #fefaf7;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 30px;
+      gap: 40px;
+    }
+
+    /* Botones de selección */
+    .selectors {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .selectors label {
+      padding: 10px 20px;
+      background-color: #F3CFCB;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      text-align: center;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input#erin:checked ~ .content .erin,
+    input#axel:checked ~ .content .axel {
+      opacity: 1;
+      transform: translateX(0);
+      position: relative;
+      z-index: 2;
+    }
+
+    input#erin:checked ~ .content .axel,
+    input#axel:checked ~ .content .erin {
+      opacity: 0;
+      transform: translateX(-40px);
+      position: absolute;
+      z-index: 1;
+    }
+
+    input#erin:checked ~ .selectors label[for="erin"],
+    input#axel:checked ~ .selectors label[for="axel"] {
+      background-color: #432323;
+      color: #F5EFE6;
+    }
+
+    .content {
+      flex: 1;
+      position: relative;
+      min-height: 250px;
+      transition: 0.5s;
+    }
+
+    .profile {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.6s ease;
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+
+    .profile h2 {
+      margin-top: 0;
+    }
+
+    .profile p {
+      line-height: 1.6;
+    }
+
+    .photo-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.6s ease;
+    }
+
+    .photo-container img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: opacity 0.6s ease;
+    }
+
+    input#erin:checked ~ .photo-container img.erin-photo {
+      opacity: 1;
+    }
+
+    input#erin:checked ~ .photo-container img.axel-photo {
+      opacity: 0;
+    }
+
+    input#axel:checked ~ .photo-container img.axel-photo {
+      opacity: 1;
+    }
+
+    input#axel:checked ~ .photo-container img.erin-photo {
+      opacity: 0;
+    }
