@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KOKO | FAQs</title>
   <link rel="stylesheet" href="./css/nav.css">
   <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/faqs.css">
+  <link rel="stylesheet" href="./css/faqs.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
   <!-- Barra de navegación -->
@@ -18,14 +21,14 @@
       <li class="has-submenu">
         <a href="#">Menu</a>
         <ul class="submenu">
-          <li><a href="#">Sobre KOKO</a></li>
-          <li><a href="#">Blogs</a></li>
-          <li><a href="#">FAQs</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Sobre KOKO</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
         </ul>
       </li>
-      <li><a href="#">Acerca de</a></li>
-      <li><a href="#">Contactanos</a></li>
-    </ul>
+      <li><a href="about.html">Acerca de</a></li>
+      <li><a href="contacto.html">Contactanos</a></li>
   </nav>
 
   <!-- Contenedor de FAQs -->
@@ -98,7 +101,7 @@
       </div>
       <div class="logo">KOKO.</div>
     </div>
-    
+
   </footer>
   <script>
     const faqItems = document.querySelectorAll('.faq-item');
@@ -108,7 +111,7 @@
       question.addEventListener('click', () => {
         item.classList.toggle('active');
         const answer = item.querySelector('.faq-answer');
-        if(item.classList.contains('active')) {
+        if (item.classList.contains('active')) {
           answer.style.maxHeight = answer.scrollHeight + "px";
         } else {
           answer.style.maxHeight = null;
@@ -118,4 +121,5 @@
   </script>
 
 </body>
+
 </html>

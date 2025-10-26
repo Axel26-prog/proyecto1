@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KOKO | Artículo del Blog</title>
-   <link rel="stylesheet" href="./css/articulo.css">
-   <link rel="stylesheet" href="./css/nav.css">
-   <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/articulo.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="./css/footer.css">
 </head>
+
 <body>
 
   <!-- Barra de navegación -->
   <nav class="navbar">
     <ul>
       <li class="has-submenu">
-        <a href="#">Menú</a>
+        <a href="#">Menu</a>
         <ul class="submenu">
-          <li><a href="#">Sobre KOKO</a></li>
-          <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="#">FAQs</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Sobre KOKO</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
         </ul>
       </li>
-      <li><a href="#">Acerca de</a></li>
-      <li><a href="#">Contáctanos</a></li>
+      <li><a href="about.html">Acerca de</a></li>
+      <li><a href="contacto.html">Contactanos</a></li>
     </ul>
   </nav>
 
@@ -31,59 +34,59 @@
     <article class="articulo">
       <h1 class="titulo-articulo"> Cómo hacemos nuestros helados artesanales</h1>
       <div class="articulo-dos-columnas">
-      <div class="contenido-articulo">
-        <p>
-          En KOKO nos apasiona crear experiencias dulces únicas. Nuestros helados son elaborados de forma artesanal, 
-          usando ingredientes frescos y locales para garantizar una textura suave y un sabor natural.
-        </p>
+        <div class="contenido-articulo">
+          <p>
+            En KOKO nos apasiona crear experiencias dulces únicas. Nuestros helados son elaborados de forma artesanal,
+            usando ingredientes frescos y locales para garantizar una textura suave y un sabor natural.
+          </p>
 
-        <h2> Ingredientes naturales</h2>
-        <p>
-          Seleccionamos cuidadosamente frutas y lácteos de proveedores nacionales. No usamos colorantes artificiales, 
-          solo lo que la naturaleza nos brinda.
-        </p>
+          <h2> Ingredientes naturales</h2>
+          <p>
+            Seleccionamos cuidadosamente frutas y lácteos de proveedores nacionales. No usamos colorantes artificiales,
+            solo lo que la naturaleza nos brinda.
+          </p>
 
-        <h2> Proceso artesanal</h2>
-        <p>
-          Cada sabor se prepara con dedicación. Batimos a mano, controlamos la temperatura y probamos cada lote 
-          para mantener la calidad que nos caracteriza.
-        </p>
+          <h2> Proceso artesanal</h2>
+          <p>
+            Cada sabor se prepara con dedicación. Batimos a mano, controlamos la temperatura y probamos cada lote
+            para mantener la calidad que nos caracteriza.
+          </p>
 
-        <blockquote>
-          "El secreto está en la pasión, no en la máquina."
-        </blockquote>
+          <blockquote>
+            "El secreto está en la pasión, no en la máquina."
+          </blockquote>
 
-        <p>
-          Si querés descubrir más sobre nuestros productos, visitá nuestra sección de 
-          <a href="blogs.html">postres y bebidas</a>.
-        </p>
+          <p>
+            Si querés descubrir más sobre nuestros productos, visitá nuestra sección de
+            <a href="blogs.html">postres y bebidas</a>.
+          </p>
+        </div>
+        <div class="tarjeta-imagen">
+          <img src="https://i.imgur.com/L6uHJTx.png" alt="Helado Artesanal">
+        </div>
       </div>
-      <div class="tarjeta-imagen">
-        <img src="https://i.imgur.com/L6uHJTx.png" alt="Helado Artesanal">
+      <div class="comentarios-seccion">
+        <h2 class="comentarios-titulo">Comentarios</h2>
+        <hr class="linea-titulo">
+        <div class="comentarios-cuadro">
+          <!-- Aquí se irán agregando los comentarios -->
+          <p>No hay comentarios aún. Sé el primero en comentar!</p>
+        </div>
       </div>
+      <div class="form-comentario">
+        <h2 class="comentarios-titulo">Deje su comentario:</h2>
+        <div class="input-grupo">
+          <input type="text" placeholder="Nombre">
+          <input type="email" placeholder="Correo">
+          <textarea placeholder="Comentario"></textarea>
+        </div>
+        <button>Enviar</button>
       </div>
-       <div class="comentarios-seccion">
-      <h2 class="comentarios-titulo">Comentarios</h2>
-      <hr class="linea-titulo">
-      <div class="comentarios-cuadro">
-        <!-- Aquí se irán agregando los comentarios -->
-        <p>No hay comentarios aún. Sé el primero en comentar!</p>
-      </div>
-    </div>
-    <div class="form-comentario">
-      <h2 class="comentarios-titulo">Deje su comentario:</h2>
-      <div class="input-grupo">
-        <input type="text" placeholder="Nombre">
-        <input type="email" placeholder="Correo">
-        <textarea placeholder="Comentario"></textarea>
-      </div>
-      <button>Enviar</button>
-    </div>
     </article>
   </main>
 
   <!-- Pie de página -->
-<footer class="footer">
+  <footer class="footer">
     <div class="footer-social">
       <div class="social-grid">
         <div class="social-item">
@@ -107,4 +110,5 @@
     </div>
   </footer>
 </body>
+
 </html>
