@@ -43,28 +43,105 @@
     </div>
   </header>
 
-  <!-- Sección introductoria -->
-  <section id="intro" class="intro">
-    <h2>Breve texto introductorio</h2>
+  <!-- Sección ¿Quiénes Somos? -->
+<section id="datos" class="about">
+  <h2 class="about-title">¿Quiénes Somos?</h2>
 
-    <div class="cards">
-      <div class="card">
-        <img src="./img/Bubble Tea Taro.png" alt="Bebida popular">
-        <div class="card-content">
-          <h3>Bebidas Populares</h3>
-          <button class="btn">Ver Más</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./img/Mochi con Fresas.png" alt="Nuevo postre">
-        <div class="card-content">
-          <h3>Nuevos Postres</h3>
-          <button class="btn">Ver Más</button>
-        </div>
-      </div>
+  <div class="about-container">
+    <!-- Cuadro izquierdo -->
+    <div class="about-card">
+      <h3>KOKO.</h3>
+      <p>
+        Somos una soda que combina lo mejor de la creatividad asiática con el sabor tropical local.
+        Un espacio joven y moderno donde cada bebida y postre está hecho para disfrutar, compartir y sonreír.
+      </p>
     </div>
-  </section>
+
+    <!-- Cuadro derecho -->
+    <div class="about-card">
+      <h3>Lo que nos hace diferente</h3>
+      <p>
+        Ofrecemos sabores exóticos que no se encuentran en otras sodas locales.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+  <!-- Sección introductoria -->
+<section id="intro" class="intro">
+  <div class="intro-container">
+    <h2 class="intro-title">TOP 5 DE KOKO.</h2>
+      <div class="line-separator"></div>
+    <p class="intro-desc">
+      Descubre nuestras bebidas favoritos: sabores frutales, texturas cremosas y
+      toppings deliciosos en cada sorbo.
+    </p>
+
+    <ul class="product-list">
+      <!-- CARD 1 -->
+      <li class="product-card">
+        <a href="#" class="product-link">
+          <div class="thumb">
+            <img src="./img/Bubble Tea Matcha.png" alt="Bubble Tea Matcha">
+          </div>
+          <h3 class="product-name">Bubble Tea Matcha</h3>
+        </a>
+      </li>
+
+      <!-- CARD 2 -->
+      <li class="product-card">
+        <a href="#" class="product-link">
+          <div class="thumb">
+            <img src="./img/Bubble Tea Taro.png" alt="Bubble Tea Taro">
+          </div>
+          <h3 class="product-name">Bubble Tea Taro</h3>
+        </a>
+      </li>
+
+      <!-- CARD 3 -->
+      <li class="product-card">
+        <a href="#" class="product-link">
+          <div class="thumb">
+            <img src="./img/Bubble Tea Original.png" alt="Bubble Tea Brown Sugar">
+          </div>
+          <h3 class="product-name">Bubble Tea Brown Sugar</h3>
+        </a>
+      </li>
+
+      <!-- CARD 4 -->
+      <li class="product-card">
+        <a href="#" class="product-link">
+          <div class="thumb">
+            <img src="./img/Coffee Boba.png" alt="Coffee Boba">
+          </div>
+          <h3 class="product-name">Coffee Boba</h3>
+        </a>
+      </li>
+
+      <!-- CARD 5 -->
+      <li class="product-card">
+        <a href="#" class="product-link">
+          <div class="thumb">
+            <img src="./img/Jelly Milk Fresa.png" alt="Jelly Milk Fresa">
+          </div>
+          <h3 class="product-name">Jelly Milk Fresa</h3>
+        </a>
+      </li>
+
+      <br>
+      <br>
+
+    </ul>
+
+    <a href="nosotros.html" class="btn-all">
+      Saber más de nosotros
+      <span class="btn-icon">➜</span>
+    </a>
+  </div>
+</section>
+
 
   <!-- Pie de página -->
   <footer class="footer">
@@ -93,15 +170,20 @@
   </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const scrollBtn = document.getElementById("scrollBtn");
-      const target = document.querySelector("#intro");
 
-      scrollBtn.addEventListener("click", function (e) {
-        e.preventDefault(); // evita el salto instantáneo al recargar
-        target.scrollIntoView({ behavior: "smooth" }); // scroll suave
-      });
+    document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.getElementById("scrollBtn");
+    const target = document.querySelector("#datos");
+    scrollBtn.addEventListener("click", function (e) {
+      e.preventDefault();// evita el salto instantáneo al recargar
+      target.scrollIntoView({ behavior: "smooth" });// scroll suave
     });
+
+    //Evitar que las cards con href="#" suban la página
+    document.querySelectorAll('.product-link[href="#"]').forEach(a => {
+      a.addEventListener('click', e => e.preventDefault());
+    });
+  });
   </script>
 </body>
 
