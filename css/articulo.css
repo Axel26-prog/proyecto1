@@ -10,6 +10,7 @@ body {
   background-color: var(--beige);
   color: var(--cafe);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Sección introductoria */
@@ -119,11 +120,12 @@ body {
 /* Contenido del artículo */
 .contenido-articulo {
   background-color: #F3CFCB;
-  padding: 25px;           
-  border-radius: 15px;     
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-  margin: 20px auto;         
-  max-width: 800px;          
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 20px 0;   
+  width: 90%;       
+  max-width: none;        
 }
 
 /* Línea de separación */
@@ -193,9 +195,12 @@ body {
 /* Contenedor de dos columnas */
 .articulo-dos-columnas {
   display: flex;
-  gap: 30px;
-  max-width: 1000px;
+  gap: 50px;
+  max-width: 100%;
   margin: 20px auto;
+  flex-wrap: wrap; 
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .contenido-articulo {
