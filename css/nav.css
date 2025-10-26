@@ -43,7 +43,7 @@
 /* Submenú */
 .has-submenu > .submenu {
   position: absolute;
-  top: 120%;
+  top: 100%;
   left: 0;
   min-width: 180px;
   background: var(--cafe);

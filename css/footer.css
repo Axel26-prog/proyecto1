@@ -4,14 +4,15 @@
   --cafe: #432323;
 }
 
+/* ===== FOOTER GENERAL ===== */
 .footer {
   background-color: var(--cafe);
   color: #fff;
-  width: 100%;               /* asegurar ancho total */
+  width: 100%;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;    /* columna, logo abajo */
-  align-items: flex-start;   /* todo alineado a la izquierda */
+  flex-direction: column;
+  align-items: flex-start;
   padding: 25px 40px;
   position: relative;
   gap: 18px;
@@ -22,7 +23,7 @@
   content: "";
   position: absolute;
   top: 8px;
-  left: 0;                   /* empezar desde 0 para evitar offsets */
+  left: 0;
   right: 0;
   height: 2px;
   background-color: rgba(255,255,255,0.25);
@@ -44,25 +45,22 @@
   align-items: flex-start;
   width: 100%;
   padding-top: 8px;
+  flex-wrap: wrap; /* permite que el contenido se ajuste */
 }
 
 .social-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+  grid-template-columns: 1fr 1fr;
   gap: 12px 24px;
-  width: auto;               /* que no intente centrar o estirarse raro */
-  justify-items: start;      /* IMPORTANT: alinea celdas a la izquierda */
+  justify-items: start;
   align-items: center;
 }
-
 
 .social-item {
   display: flex;
   align-items: center;
-  justify-content: flex-start;  /* fuerza contenido a la izquierda */
+  justify-content: flex-start;
   gap: 10px;
-  margin: 0;
-  padding: 0;
 }
 
 .social-item img {
@@ -72,22 +70,80 @@
   filter: brightness(0) invert(1);
   transition: transform 0.15s ease;
 }
+
 .social-item img:hover {
   transform: scale(1.2);
 }
 
-
 .social-item span,
 .social-item a {
-  display: inline-block;
   color: #fff;
   font-size: 14px;
   text-decoration: none;
-  margin: 0;
-  padding: 0;
 }
-
 
 .social-item a:hover {
   text-decoration: underline;
+}
+
+/* ===== LOGO DEL FOOTER ===== */
+.footer .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--rosa);
+  margin-top: 10px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 3px rgba(0,0,0,0.2));
+}
+
+/* ====== MEDIA QUERIES ====== */
+
+/* 📱 Dispositivos pequeños (celulares) */
+@media (max-width: 600px) {
+  .footer {
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .social-item {
+    justify-content: center;
+  }
+
+  .footer .logo {
+    text-align: center;
+    margin: 10px 0 0 0;
+  }
+}
+
+/* 💻 Tablets y pantallas medianas */
+@media (min-width: 601px) and (max-width: 900px) {
+  .social-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .footer-social {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
