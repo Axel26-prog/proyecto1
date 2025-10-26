@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOKO | Blog</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/blog.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="icons"></div>
+
+        <ul>
+            <li class="has-submenu">
+                <a href="#">Menu</a>
+                <ul class="submenu">
+                    <li><a href="#">Sobre KOKO</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Contactanos</a></li>
+        </ul>
+    </nav>
+
+    <!-- ENCABEZADO DEL BLOG -->
+    <header class="blog-header">
+        <div class="banner">
+            <h1>Blogs de KOKO.</h1>
+            <p class="slogan">“Más que una bebida, una experiencia.”</p>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="blog-layout">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>SECCIONES</h3>
+            <br>
+            <ul>
+                <li><a href="#experiencias">> Experiencias del Cliente</a></li>
+                <li><a href="#innovacion">> Innovación y Cultura</a></li>
+                <li><a href="#salud">> Salud y Bienestar</a></li>
+            </ul>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="blog-content">
+
+            <!-- EXPERIENCIAS DEL CLIENTE -->
+            <section id="experiencias" class="blog-section">
+                <h2>Experiencias del Cliente</h2>
+                <hr class="linea-cafe">
+
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <strong>¿Cómo disfrutar tu primera visita a KOKO.?</strong>
+                        <p><em>Tu primera visita, una experiencia que despierta todos los sentidos.</em></p>
+                        <button class="btn-leer">Leer más...</button>
+                    </div>
+                    <img src="./img/koko3.jpg" alt="Primera visita a KOKO" class="blog-img">
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <strong>Las bebidas favoritas de nuestros clientes</strong>
+                        <p><em>Sabores que enamoran, burbujas que te hacen sonreír.</em></p>
+                        <button class="btn-leer">Leer más...</button>
+                    </div>
+                    <img src="./img/favorito.png" alt="Bebidas favoritas KOKO" class="blog-img">
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <strong>Momentos perfectos para compartir un Bubble Tea</strong>
+                        <p><em>Comparte risas, momentos y burbujas de felicidad.</em></p>
+                        <button class="btn-leer">Leer más...</button>
+                    </div>
+                    <img src="./img/bubbleTea.png" alt="Momentos Bubble Tea" class="blog-img">
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <strong>Nueva sensación y combinación del Mochi</strong>
+                        <p><em>Dulce, suave y única — la magia del mochi en cada bocado.</em></p>
+                        <button class="btn-leer">Leer más...</button>
+                    </div>
+                    <img src="./img/mezclaMochi.jpg" alt="Mochi KOKO" class="blog-img">
+                </div>
+            </section>
+            <br>
+
+            <!-- INNOVACIÓN Y CULTURA -->
+            <section id="innovacion" class="blog-section">
+                <h2>Innovación y Cultura</h2>
+                <hr class="linea-cafe">
+
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <strong>La evolución del Bubble Tea en Costa Rica</strong>
+                        <p><em>De Asia al corazón de Costa Rica, reinventando la manera de disfrutar el té.</em></p>
+                        <button class="btn-leer">Leer más...</button>
+                    </div>
+                    <img src="./img/origen.jpg" alt="Evolución Bubble Tea" class="blog-img">
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <strong>Sabores internacionales que inspiran nuestras bebidas</strong>
+                        <p><em>Un viaje de sabor entre culturas, en cada vaso KOKO.</em></p>
+                        <button class="btn-leer">Leer más...</button>
+                    </div>
+                    <img src="./img/matcha.jpg" alt="Sabores Internacionales" class="blog-img">
+                </div>
+            </section>
+            <br>
+
+            <!-- SALUD Y BIENESTAR -->
+            <section id="salud" class="blog-section">
+                <h2>Salud y Bienestar</h2>
+                <hr class="linea-cafe">
+
+                <div class="blog-card">
+                    <div class="blog-content">
+                        <strong>Batidos saludables: pequeños hábitos, grandes cambios</strong>
+                        <p><em>Natural, fresco y real: bienestar servido con sabor.</em></p>
+                        <button class="btn-leer">Leer más...</button>
+                    </div>
+                    <img src="./img/batidos.jpg" alt="Batidos saludables" class="blog-img">
+                </div>
+            </section>
+            <br>
+
+
+        </main>
+    </div>
+
+    <!-- Botón flotante “volver arriba” -->
+    <a href="#top" class="back-to-top" aria-label="Volver al inicio">↑</a>
+
+
+    <script>
+        window.addEventListener('load', function () {
+            if (location.hash) {
+                history.replaceState(null, null, location.pathname + location.search);
+                window.scrollTo(0, 0);
+            }
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-social">
+            <div class="social-grid">
+                <div class="social-item">
+                    <img src="./img/logo whatsapp.png" alt="+(506) 7123-3755">
+                    <span>+(506) 7123-3755</span>
+                </div>
+                <div class="social-item">
+                    <img src="./img/logo instagram.png" alt="koko.soda25">
+                    <span>koko.soda25</span>
+                </div>
+                <div class="social-item">
+                    <img src="./img/logo facebook.png" alt="Huang Nick (Soda Koko)">
+                    <span>Soda Koko</span>
+                </div>
+                <div class="social-item">
+                    <img src="./img/ubicacion.png" alt="Click aqui para obtener la ubicación">
+                    <a href="#">Click aquí para obtener la ubicación</a>
+                </div>
+            </div>
+            <div class="logo">KOKO.</div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>l
