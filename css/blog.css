@@ -55,7 +55,7 @@
     border-radius: 12px;
     padding: 20px;
     min-width: 200px;
-    height: 230px;
+    height: auto;
 }
 
 .sidebar h3 {
@@ -211,6 +211,34 @@ a.btn-leer:hover {
 .back-to-top:hover {
     transform: translateY(-2px) scale(1.04);
     opacity: 1;
+}
+
+.tag-cloud {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* dos columnas */
+    gap: 10px 14px;
+    /* espacio entre filas y columnas */
+}
+
+.tag-cloud .tag {
+    display: block;
+    background-color: var(--cafe);
+    color: var(--beige);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+    text-align: center;
+    transition: transform .15s ease, background-color .2s ease, color .2s ease;
+}
+
+.tag-cloud .tag:hover {
+    background-color: var(--rosa);
+    color: var(--cafe);
+    transform: translateY(-1px);
 }
 
 /* Adaptar para móviles */
