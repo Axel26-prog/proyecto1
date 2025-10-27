@@ -20,6 +20,7 @@
             <li class="has-submenu">
                 <a href="#">Menu</a>
                 <ul class="submenu">
+                    <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../nosotros.html">Sobre KOKO.</a></li>
                     <li><a href="../blog.html">Blogs</a></li>
                     <li><a href="../faqs.html">FAQs</a></li>
@@ -39,24 +40,27 @@
         </header>
 
         <section class="article-content">
-            <p>El bubble tea nació en Taiwán y, en pocos años, viajó por el mundo. En Costa Rica, su adopción creció con
-                rapidez gracias a la <strong>mezcla</strong> de frutas locales y técnicas asiáticas. Hoy los
-                consumidores valoran la personalización del dulzor y los toppings, además de la estética del vaso,
-                perfecta para compartir en redes.</p>
+            <p>El <strong>Bubble Tea </strong>tuvo su origen en Taiwán y, en poco tiempo, conquistó paladares alrededor
+                del mundo.
+                En <strong>Costa Rica</strong>, su popularidad creció gracias a la fusión de <strong>sabores tropicales
+                    locales</strong> con las técnicas tradicionales de Asia.</p>
+            <p>Esta bebida se transformó en un símbolo de juventud y creatividad, destacando por la posibilidad de
+                <strong>personalizar </strong>el nivel de azúcar, el tipo de té y los toppings.
+                Además, su estética colorida y fotogénica la ha vuelto protagonista en redes sociales</p>
 
             <h2>Hitos locales</h2>
             <ul>
-                <li>Primera ola: curiosidad y sabores clásicos.</li>
-                <li>Segunda ola: creatividad con frutas tropicales.</li>
-                <li>Tercera ola: propuestas premium y texturas nuevas.</li>
+                <li>Primera ola: cuando el bubble tea llegó por primera vez, generando curiosidad y ofreciendo sabores clásicos (como té negro con leche y tapioca).</li>
+                <li>Segunda ola: cuando comenzaron a aparecer combinaciones más creativas con frutas tropicales y adaptaciones locales.</li>
+                <li>Tercera ola: la etapa actual, donde surgen propuestas más sofisticadas (premium), con nuevas texturas, toppings y presentaciones más estéticas.</li>
             </ul>
 
             <img src="../img/taiwan.jpg" alt="Hitos del bubble tea">
         </section>
         <br>
-<br>
-<br>
-<br>
+        <br>
+        <br>
+        <br>
         <!-- COMENTARIOS -->
         <div class="comentarios-seccion">
             <h2 class="comentarios-titulo">Comentarios</h2>
@@ -64,7 +68,8 @@
 
             <div class="comentarios-cuadro">
                 <!-- comentarios -->
-                <p><strong>Esteban G. :</strong> <i>"Las tapiocas que hacen son excelentes, tienen un sabor suave"</i></p>
+                <p><strong>Esteban G. :</strong> <i>"Las tapiocas que hacen son excelentes, tienen un sabor suave"</i>
+                </p>
             </div>
         </div>
 
@@ -117,6 +122,44 @@
         </div>
     </footer>
 
+    <script>
+        // Selecciona el botón y los campos del formulario de comentario
+        const comentarioForm = document.querySelector('.form-comentario');
+        const botonEnviar = comentarioForm.querySelector('button');
+
+        botonEnviar.addEventListener('click', (e) => {
+            e.preventDefault(); // evita recargar la página
+
+            // Obtener valores (opcional, si quisieras validarlos)
+            const nombre = comentarioForm.querySelector('input[type="text"]').value.trim();
+            const correo = comentarioForm.querySelector('input[type="email"]').value.trim();
+            const comentario = comentarioForm.querySelector('textarea').value.trim();
+
+            if (!nombre || !correo || !comentario) {
+                alert('Por favor, complete todos los campos antes de enviar su comentario.');
+                return;
+            }
+
+            // Mostrar mensaje de confirmación
+            const mensaje = document.createElement('p');
+            mensaje.textContent = '¡Gracias por tu comentario! ❤️';
+            mensaje.style.backgroundColor = '#D4EDDA';
+            mensaje.style.border = '1px solid #C3E6CB';
+            mensaje.style.color = '#155724';
+            mensaje.style.padding = '10px';
+            mensaje.style.borderRadius = '10px';
+            mensaje.style.marginTop = '10px';
+            mensaje.style.textAlign = 'center';
+
+            comentarioForm.appendChild(mensaje);
+
+            // Limpiar formulario
+            comentarioForm.reset();
+
+            // Ocultar el mensaje después de 5 segundos
+            setTimeout(() => mensaje.remove(), 5000);
+        });
+    </script>
 
 </body>
 

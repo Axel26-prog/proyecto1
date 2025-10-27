@@ -20,6 +20,7 @@
             <li class="has-submenu">
                 <a href="#">Menu</a>
                 <ul class="submenu">
+                    <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../nosotros.html">Sobre KOKO.</a></li>
                     <li><a href="../blog.html">Blogs</a></li>
                     <li><a href="../faqs.html">FAQs</a></li>
@@ -39,18 +40,19 @@
         </header>
 
         <section class="article-content">
-            <p>Exploramos recetas del mundo para crear combinaciones únicas. Desde el <em>matcha</em> japonés hasta el
-                <strong>té negro</strong> de Taiwán, cada ingrediente trae historia y carácter. Nuestro objetivo es
-                traducir esa identidad en bebidas equilibradas y memorables.</p>
+            <p>En <strong>KOKO.</strong> nos inspira el mundo y sus sabores. 
+                Cada una de nuestras bebidas nace de la fusión entre culturas: exploramos recetas tradicionales para transformarlas en experiencias únicas. 
+                Desde el <strong>matcha japonés</strong>, con su equilibrio sereno, hasta el <strong>té negro taiwanés</strong>, símbolo del origen del bubble tea, cada ingrediente cuenta una historia. 
+                También incorporamos la frescura costarricense en creaciones como el <strong>ChocoBanano</strong> y la <strong>Piña Colada</strong>, logrando un menú que celebra la diversidad y convierte cada sorbo en un viaje sensorial.</p>
 
             <h2>Rutas de sabor</h2>
             <ul class="check">
-                <li>Japón — Matcha y Té Verde.</li>
-                <li>Taiwán — Clásicos con boba y Té Negro.</li>
-                <li>Costa Rica — ChocoBanano y Piña Colada.</li>
+                <li><strong>Japón </strong>— Matcha y Té Verde.</li>
+                <li><strong>Taiwán </strong>— Clásicos con boba y Té Negro.</li>
+                <li><strong>Costa Rica</strong> — ChocoBanano y Piña Colada.</li>
             </ul>
 
-            <img src="../img/teagarden.jpg" alt="Ruta de sabores">
+            <img src="../img/teagarden.jpg" alt="Té Taiwanés">
         </section>
 
         <br>
@@ -117,6 +119,44 @@
         </div>
     </footer>
 
+     <script>
+        // Selecciona el botón y los campos del formulario de comentario
+        const comentarioForm = document.querySelector('.form-comentario');
+        const botonEnviar = comentarioForm.querySelector('button');
+
+        botonEnviar.addEventListener('click', (e) => {
+            e.preventDefault(); // evita recargar la página
+
+            // Obtener valores (opcional, si quisieras validarlos)
+            const nombre = comentarioForm.querySelector('input[type="text"]').value.trim();
+            const correo = comentarioForm.querySelector('input[type="email"]').value.trim();
+            const comentario = comentarioForm.querySelector('textarea').value.trim();
+
+            if (!nombre || !correo || !comentario) {
+                alert('Por favor, complete todos los campos antes de enviar su comentario.');
+                return;
+            }
+
+            // Mostrar mensaje de confirmación
+            const mensaje = document.createElement('p');
+            mensaje.textContent = '¡Gracias por tu comentario! ❤️';
+            mensaje.style.backgroundColor = '#D4EDDA';
+            mensaje.style.border = '1px solid #C3E6CB';
+            mensaje.style.color = '#155724';
+            mensaje.style.padding = '10px';
+            mensaje.style.borderRadius = '10px';
+            mensaje.style.marginTop = '10px';
+            mensaje.style.textAlign = 'center';
+
+            comentarioForm.appendChild(mensaje);
+
+            // Limpiar formulario
+            comentarioForm.reset();
+
+            // Ocultar el mensaje después de 5 segundos
+            setTimeout(() => mensaje.remove(), 5000);
+        });
+    </script>
 
 </body>
 

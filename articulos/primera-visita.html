@@ -20,6 +20,7 @@
             <li class="has-submenu">
                 <a href="#">Menu</a>
                 <ul class="submenu">
+                    <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../nosotros.html">Sobre KOKO.</a></li>
                     <li><a href="../blog.html">Blogs</a></li>
                     <li><a href="../faqs.html">FAQs</a></li>
@@ -74,10 +75,10 @@
             <p>Para quienes nos visitan por primera vez, recomendamos un nivel de dulzor medio. Si prefieres algo
                 ligero, pide 30% y añade un topping dulce para equilibrar.</p>
         </section>
-<br>
-<br>
-<br>
-<br>
+        <br>
+        <br>
+        <br>
+        <br>
         <!-- COMENTARIOS -->
         <div class="comentarios-seccion">
             <h2 class="comentarios-titulo">Comentarios</h2>
@@ -85,7 +86,8 @@
 
             <div class="comentarios-cuadro">
                 <!-- comentarios -->
-                <p><strong>Juan C. :</strong> <i>"Me encantó como quedó mi primer Bubble Tea, con el topping de cream cheese"</i></p>
+                <p><strong>Juan C. :</strong> <i>"Me encantó como quedó mi primer Bubble Tea, con el topping de cream
+                        cheese"</i></p>
             </div>
         </div>
 
@@ -142,6 +144,44 @@
         </div>
     </footer>
 
+    <script>
+        // Selecciona el botón y los campos del formulario de comentario
+        const comentarioForm = document.querySelector('.form-comentario');
+        const botonEnviar = comentarioForm.querySelector('button');
+
+        botonEnviar.addEventListener('click', (e) => {
+            e.preventDefault(); // evita recargar la página
+
+            // Obtener valores (opcional, si quisieras validarlos)
+            const nombre = comentarioForm.querySelector('input[type="text"]').value.trim();
+            const correo = comentarioForm.querySelector('input[type="email"]').value.trim();
+            const comentario = comentarioForm.querySelector('textarea').value.trim();
+
+            if (!nombre || !correo || !comentario) {
+                alert('Por favor, complete todos los campos antes de enviar su comentario.');
+                return;
+            }
+
+            // Mostrar mensaje de confirmación
+            const mensaje = document.createElement('p');
+            mensaje.textContent = '¡Gracias por tu comentario! ❤️';
+            mensaje.style.backgroundColor = '#D4EDDA';
+            mensaje.style.border = '1px solid #C3E6CB';
+            mensaje.style.color = '#155724';
+            mensaje.style.padding = '10px';
+            mensaje.style.borderRadius = '10px';
+            mensaje.style.marginTop = '10px';
+            mensaje.style.textAlign = 'center';
+
+            comentarioForm.appendChild(mensaje);
+
+            // Limpiar formulario
+            comentarioForm.reset();
+
+            // Ocultar el mensaje después de 5 segundos
+            setTimeout(() => mensaje.remove(), 5000);
+        });
+    </script>
 
 </body>
 

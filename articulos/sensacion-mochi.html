@@ -20,6 +20,7 @@
             <li class="has-submenu">
                 <a href="#">Menu</a>
                 <ul class="submenu">
+                    <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../nosotros.html">Sobre KOKO.</a></li>
                     <li><a href="../blog.html">Blogs</a></li>
                     <li><a href="../faqs.html">FAQs</a></li>
@@ -39,7 +40,9 @@
         </header>
 
         <section class="article-content">
-            <p>El mochi conquista por su <strong>elasticidad</strong> y corazón dulce. En KOKO servimos el mochi en otra forma (en vez de masas redondas) con rellenos
+            <p>El <strong>Mochi</strong> es mucho más que un postre: es una experiencia suave, fría y mágica.
+Hecho con una mezcla glutinoso de arroz y relleno de helado, combina la textura elástica con el toque cremoso y dulce de las frutas.</p>
+            <p> En KOKO. servimos el mochi en otra forma (en vez de masas redondas) con rellenos
                 frutales y el base glutinosa y original del mochi. Si te gusta experimentar, esta guía te propone combinaciones para un bocado
                 de pura felicidad.</p>
                 <br>
@@ -78,7 +81,6 @@
                 </tbody>
             </table>
 
-           
         </section>
 
         <br>
@@ -147,6 +149,44 @@
             </div>
         </footer>
 
+        <script>
+        // Selecciona el botón y los campos del formulario de comentario
+        const comentarioForm = document.querySelector('.form-comentario');
+        const botonEnviar = comentarioForm.querySelector('button');
+
+        botonEnviar.addEventListener('click', (e) => {
+            e.preventDefault(); // evita recargar la página
+
+            // Obtener valores (opcional, si quisieras validarlos)
+            const nombre = comentarioForm.querySelector('input[type="text"]').value.trim();
+            const correo = comentarioForm.querySelector('input[type="email"]').value.trim();
+            const comentario = comentarioForm.querySelector('textarea').value.trim();
+
+            if (!nombre || !correo || !comentario) {
+                alert('Por favor, complete todos los campos antes de enviar su comentario.');
+                return;
+            }
+
+            // Mostrar mensaje de confirmación
+            const mensaje = document.createElement('p');
+            mensaje.textContent = '¡Gracias por tu comentario! ❤️';
+            mensaje.style.backgroundColor = '#D4EDDA';
+            mensaje.style.border = '1px solid #C3E6CB';
+            mensaje.style.color = '#155724';
+            mensaje.style.padding = '10px';
+            mensaje.style.borderRadius = '10px';
+            mensaje.style.marginTop = '10px';
+            mensaje.style.textAlign = 'center';
+
+            comentarioForm.appendChild(mensaje);
+
+            // Limpiar formulario
+            comentarioForm.reset();
+
+            // Ocultar el mensaje después de 5 segundos
+            setTimeout(() => mensaje.remove(), 5000);
+        });
+    </script>
 
 </body>
 
