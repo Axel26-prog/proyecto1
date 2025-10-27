@@ -60,13 +60,13 @@ body {
     margin: 20px auto;
     object-fit: cover;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    
+
 }
 
 /* Imágenes dentro del contenido */
 .article-content img {
     width: 300px;
-    
+
     height: 100;
     border-radius: 14px;
     display: block;
@@ -117,4 +117,74 @@ body {
 ul.check li {
     list-style: "✓  ";
     margin-left: 1ch
+}
+
+/* Título de la sección de comentarios */
+.comentarios-titulo {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #4b2e2b;
+    margin-left: 15px;
+}
+
+/* Línea decorativa debajo del título */
+.linea-titulo {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border: none;
+    margin: 5px 0 15px 0;
+}
+
+/* Cuadro que contiene los comentarios publicados */
+.comentarios-cuadro {
+    background-color: #F3CFCB;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Formulario para escribir un nuevo comentario */
+.form-comentario {
+    background-color: #F3CFCB;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Estructura del grupo de inputs */
+.form-comentario .input-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Campos de texto y área de comentario */
+.form-comentario input,
+.form-comentario textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* Botón de envío */
+.form-comentario button {
+    padding: 10px 20px;
+    background-color: var(--cafe);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: bold;
+}
+
+.form-comentario button:hover {
+    background-color: #6b3f3a;
 }
