@@ -171,7 +171,7 @@ html {
     flex-shrink: 0;
 }
 
-.btn-leer {
+a.btn-leer {
     background-color: var(--cafe);
     color: var(--beige);
     border: none;
@@ -181,7 +181,7 @@ html {
     font-weight: bold;
 }
 
-.btn-leer:hover {
+a.btn-leer:hover {
     background-color: #5c3535;
     transform: scale(1.05);
     transition: 0.2s ease;
