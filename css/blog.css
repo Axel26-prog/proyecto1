@@ -258,3 +258,40 @@ a.btn-leer:hover {
         height: auto;
     }
 }
+
+/* --- Ajustes responsivos para el banner --- */
+@media (max-width: 992px) {
+    .banner {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner .slogan {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-header {
+        padding: 30px 10px;
+    }
+
+    .banner {
+        width: 100%;
+        border-radius: 12px;
+        padding: 20px 15px;
+    }
+
+    .banner h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .banner .slogan {
+        font-size: 0.9rem;
+    }
+}

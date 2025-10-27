@@ -90,8 +90,10 @@ body {
 .table td {
     border: 1px solid #d9c9c2;
     padding: 10px 12px;
-    text-align: left
+    text-align: left;
 }
+
+
 
 .badge {
     display: inline-block;
@@ -186,4 +188,77 @@ ul.check li {
 
 .form-comentario button:hover {
     background-color: #6b3f3a;
+}
+
+/* ===== Imágenes responsivas pero más contenidas ===== */
+:root {
+    --img-hero-max: 580px;
+    /* antes 720px */
+    --img-content-max: 520px;
+    /* antes 680px */
+}
+
+/* Imagen del encabezado (banner del artículo) */
+.article-hero img {
+    display: block;
+    width: 90%;
+    /* un poco de margen lateral */
+    max-width: var(--img-hero-max);
+    height: auto;
+    margin: 20px auto;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Imágenes dentro del contenido */
+.article-content img {
+    display: block;
+    width: 90%;
+    max-width: var(--img-content-max);
+    height: auto;
+    margin: 16px auto;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+    .article-hero img {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16/9;
+    }
+}
+
+/* ===== Botón Volver al Blog alineado a la derecha ===== */
+.back {
+    display: inline-block;
+    margin: 10px 0 24px;
+    color: var(--cafe);
+    text-decoration: none;
+    border: 2px solid var(--cafe);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: bold;
+    float: right;
+    /* lo alinea a la derecha */
+    transition: all 0.2s ease;
+}
+
+.back:hover {
+    background-color: var(--cafe);
+    color: var(--claro);
+}
+
+/* --- Responsivo: vuelve al centro en pantallas pequeñas --- */
+@media (max-width: 600px) {
+    .back {
+        float: none;
+        display: block;
+        margin: 10px auto 24px;
+        /* centrado */
+        text-align: center;
+        width: fit-content;
+    }
 }
