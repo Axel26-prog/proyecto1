@@ -1,117 +1,151 @@
 body {
-      margin: 0;
-      background-color: #F5EFE6;
-      color: #432323;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      font-family: 'Century Gothic', sans-serif;
-    }
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Georgia', serif;
+  margin: 0;
+  background-color: #F5EFE6;
+  color: #432323;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Century Gothic', sans-serif;
 }
-    main {
-      flex: 1;
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .contact-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
-
-    .contact-info {
-      flex: 1;
-      min-width: 250px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      background-color: #fefaf7;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .contact-info div {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .contact-info img {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-      filter: invert(30%) sepia(50%) saturate(499%) hue-rotate(10deg) brightness(12%) contrast(90%);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Georgia', serif;
 }
-    
 
-    .contact-info img:hover {
-      transform: scale(1.1);
-      transition: transform 0.3s ease;
-    }
+main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
 
-    form {
-      flex: 1;
-      min-width: 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      background-color: #fefaf7;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    label {
-      font-weight: bold;
-    }
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
 
-    input, textarea {
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #432323;
-      width: 100%;
-      font-family: inherit;
-      font-size: 1em;
-      box-sizing: border-box;
-    }
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fefaf7;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
+.contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    button {
-      width: 150px;
-      padding: 10px;
-      border: none;
-      border-radius: 20px;
-      background-color: #f3cfcb;
-      font-weight: bold;
-      cursor: pointer;
-      align-self: flex-start;
-    }
+.contact-info img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: invert(30%) sepia(50%) saturate(499%) hue-rotate(10deg) brightness(12%) contrast(90%);
+}
 
-    button:hover {
-      background-color: #e6b6b2;
-    }
 
-    .success-message {
-      display: none;
-      padding: 15px;
-      background-color: #D4EDDA;
-      border: 1px solid #C3E6CB;
-      border-radius: 10px;
-      color: #155724;
-      text-align: center;
-      margin-top: 10px;
-    }
+.contact-info img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fefaf7;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #432323;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f3cfcb;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: #e6b6b2;
+}
+
+.success-message {
+  display: none;
+  padding: 15px;
+  background-color: #D4EDDA;
+  border: 1px solid #C3E6CB;
+  border-radius: 10px;
+  color: #155724;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Agrupaciones del form ya existente */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Estilo de fieldset */
+fieldset.field {
+  border: 1px solid #432323;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+legend {
+  padding: 0 6px;
+}
+
+/* Checkbox en bloque suave */
+.checkbox-field {
+  background: #f3cfcb;
+  padding: 12px;
+  border-radius: 10px;
+}

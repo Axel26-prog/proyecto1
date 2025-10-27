@@ -83,9 +83,9 @@
         </section>
 
         <br>
-<br>
-<br>
-<br>
+        <br>
+        <br>
+        <br>
         <!-- COMENTARIOS -->
         <div class="comentarios-seccion">
             <h2 class="comentarios-titulo">Comentarios</h2>
@@ -97,16 +97,17 @@
             </div>
         </div>
 
+
         <!-- FORMULARIO DE COMENTARIO -->
-        <div class="form-comentario">
+        <form class="form-comentario" id="comentarioForm">
             <h2 class="comentarios-titulo">Deje su comentario:</h2>
             <div class="input-grupo">
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="Correo">
-                <textarea placeholder="Comentario"></textarea>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo" required>
+                <textarea placeholder="Comentario" required></textarea>
             </div>
-            <button>Enviar</button>
-        </div>
+            <button type="submit">Enviar</button>
+        </form>
     </main>
 
     <!-- Pie de página -->
@@ -145,15 +146,12 @@
         </div>
     </footer>
 
-     <script>
-        // Selecciona el botón y los campos del formulario de comentario
-        const comentarioForm = document.querySelector('.form-comentario');
-        const botonEnviar = comentarioForm.querySelector('button');
+    <script>
+        const comentarioForm = document.getElementById('comentarioForm');
 
-        botonEnviar.addEventListener('click', (e) => {
+        comentarioForm.addEventListener('submit', (e) => {
             e.preventDefault(); // evita recargar la página
 
-            // Obtener valores (opcional, si quisieras validarlos)
             const nombre = comentarioForm.querySelector('input[type="text"]').value.trim();
             const correo = comentarioForm.querySelector('input[type="email"]').value.trim();
             const comentario = comentarioForm.querySelector('textarea').value.trim();
@@ -163,7 +161,7 @@
                 return;
             }
 
-            // Mostrar mensaje de confirmación
+            // Crear mensaje de confirmación
             const mensaje = document.createElement('p');
             mensaje.textContent = '¡Gracias por tu comentario! ❤️';
             mensaje.style.backgroundColor = '#D4EDDA';
@@ -176,10 +174,10 @@
 
             comentarioForm.appendChild(mensaje);
 
-            // Limpiar formulario
+            //Reset form
             comentarioForm.reset();
 
-            // Ocultar el mensaje después de 5 segundos
+            // Ocultar mensaje después de 5 segundos
             setTimeout(() => mensaje.remove(), 5000);
         });
     </script>

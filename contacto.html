@@ -73,7 +73,7 @@
         </div>
       </div>
       <!-- Columna derecha: formulario -->
-      <form id="contactForm">
+      <!--<form id="contactForm">
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" required>
 
@@ -88,7 +88,57 @@
         <div class="success-message" id="successMessage">
           ¡Gracias! Tu mensaje ha sido enviado.
         </div>
+      </form>-->
+
+      <form id="contactForm" novalidate>
+        <!-- 1. Nombre (text) -->
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre y apellidos" required>
+
+        <!-- 2. Correo (email) -->
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="tucorreo@example.com" required>
+
+        <!-- 3. Teléfono (tel) -->
+        <label for="phone">Teléfono:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+506 7123-3755" pattern="^[0-9+\\s-]{8,}$" required>
+
+        <!-- 4. Tipo de consulta (select) -->
+        <label for="topic">Tipo de consulta:</label>
+        <select id="topic" name="topic" required>
+          <option value="">Selecciona una opción…</option>
+          <option>Información general</option>
+          <option>Pedido para evento</option>
+          <option>Personalización de bebidas</option>
+          <option>Sugerencia o comentario</option>
+        </select>
+
+        <!-- 5. Fecha preferida (date) -->
+        <label for="date">Fecha preferida de visita/entrega:</label>
+        <input type="date" id="date" name="date">
+
+
+        <!-- 8. Consentimiento (checkbox) -->
+        <div class="field checkbox-field">
+          <label>
+            <input type="checkbox" id="consent" name="consent" required>
+            Acepto ser contactado/a y autorizo el uso de mis datos para gestionar esta consulta.
+          </label>
+        </div>
+
+        <!-- 9. Mensaje (textarea) -->
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Cuéntanos tu idea, sabores y horario ideal…"
+          required></textarea>
+
+        <button type="submit">Enviar</button>
+
+        <!-- Respuesta tras enviar -->
+        <div class="success-message" id="successMessage" role="status" aria-live="polite">
+          ¡Gracias! Tu mensaje ha sido enviado.
+        </div>
       </form>
+
 
     </div>
   </main>
@@ -110,8 +160,20 @@
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      // Validación nativa + mensaje del navegador
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Mostrar confirmación y limpiar
       successMessage.style.display = 'block';
+      successMessage.textContent = '¡Gracias! Hemos recibido tu mensaje y te contactaremos pronto.';
       form.reset();
+
+      // Ocultar mensaje después de 5s
+      setTimeout(() => successMessage.style.display = 'none', 5000);
     });
   </script>
 </body>
