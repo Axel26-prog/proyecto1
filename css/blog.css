@@ -295,3 +295,33 @@ a.btn-leer:hover {
         font-size: 0.9rem;
     }
 }
+
+/* --- responsivo del banner --- */
+.banner {
+    width: min(100%, 1000px);
+    /* respeta el límite sin desbordar */
+    box-sizing: border-box;
+    /* el padding ya no suma ancho extra */
+    padding: clamp(16px, 5vw, 40px);
+}
+
+/* Ajuste del header para que el padding lateral no empuje el banner */
+.blog-header {
+    padding: clamp(20px, 6vw, 60px) clamp(12px, 4vw, 30px) clamp(16px, 4vw, 30px);
+}
+
+/* Móvil: bordes y tipografía más contenida */
+@media (max-width: 600px) {
+    .banner {
+        border-radius: 12px;
+    }
+
+    .banner h1 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .banner .slogan {
+        font-size: 0.95rem;
+    }
+}

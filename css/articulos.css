@@ -27,8 +27,11 @@ body {
 }
 
 .article-hero h1 {
+    font-size: clamp(1.4rem, 4vw + 0.5rem, 2.8rem);
+    line-height: 1.2;
     margin: 0 0 6px;
-    font-size: 40px
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .article-meta {
