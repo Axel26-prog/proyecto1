@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Encabezado */
 .hero {
-  background: url("../img/header.png") center/cover no-repeat;
+  background: url("../img/header.jpg") center/cover no-repeat;
   color: var(--beige);
   position: relative;
   overflow: hidden;

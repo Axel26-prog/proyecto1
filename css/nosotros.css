@@ -7,7 +7,7 @@
 /* Encabezado */
 .nosotros {
 
-    background: var(--rosa);
+    background: url("../img/nosotros2.png") center/cover no-repeat;
     color: var(--beige);
     position: relative;
     overflow: hidden;

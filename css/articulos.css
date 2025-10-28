@@ -86,15 +86,19 @@ body {
 .table {
     width: 100%;
     border-collapse: collapse;
-    margin: 10px 0 20px
+    margin: 10px 0 20px;
+    table-layout: auto;
 }
 
 .table th,
 .table td {
-    border: 1px solid #d9c9c2;
+    border: 1px solid var(--cafe);
     padding: 10px 12px;
     text-align: left;
+    word-break: break-word;
 }
+
+
 
 
 
@@ -263,5 +267,41 @@ ul.check li {
         /* centrado */
         text-align: center;
         width: fit-content;
+    }
+}
+
+/* === Tabla responsive SOLO para bebidas-favoritas === */
+/* Scroll horizontal SOLO para la tabla de bebidas favoritas */
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* desplazamiento suave en móviles */
+    margin-bottom: 1.5rem;
+}
+
+.tabla-fav {
+    min-width: 600px;
+    /* ancho mínimo antes de activar scroll */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabla-fav th,
+.tabla-fav td {
+    padding: 10px 12px;
+    border: 1px solid var(--cafe);
+    text-align: left;
+    white-space: nowrap;
+    /* evita que los encabezados se partan */
+}
+
+/* Ajuste visual en pantallas pequeñas */
+@media (max-width: 600px) {
+
+    .tabla-fav th,
+    .tabla-fav td {
+        font-size: 0.9rem;
+        padding: 8px 10px;
     }
 }

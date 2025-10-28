@@ -149,3 +149,31 @@ legend {
   padding: 12px;
   border-radius: 10px;
 }
+
+/*formato de combo box*/
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #432323;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1em;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #432323;
+  appearance: none;              /* elimina el estilo del navegador */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23432323' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+/* Efecto hover igual que los inputs */
+select:hover,
+select:focus {
+  outline: none;
+  border-color: #6b3f3a;
+  box-shadow: 0 0 4px rgba(107, 63, 58, 0.3);
+}
